@@ -1,0 +1,30 @@
+﻿@model CemKeskin.Models.Classes.ForHome
+
+
+<div class="container">
+    <div class="services-padding">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>Servisler</h2>
+            </div>
+        </div>
+        <div class="row">
+
+            @foreach (var service in Model.ServicePage)
+            {
+            <div class="col-md-4 text-center">
+                <div class="feature-left">
+                    <span class="icon">
+                        <i class="@service.ServicesIcon" style="width:80px; height:70px; color:orange; margin-top:15px;"></i>
+                    </span>
+                    <div class="feature-copy">
+                        <h3>@service.ServicesTitle</h3>
+                        <p>@service.ServicesContent</p>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,61 @@
+﻿@model CemKeskin.Models.Classes.ForAdmin
+@{
+    ViewBag.Title = "AboutMe";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<body>
+    <div id="layoutSidenav">
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Hakkımda Bölümü</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Admin Panel/Hakkımda Bölümü</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-address-book"></i>
+                                    Hakkımda Tablosu
+                                </div>
+                                       
+                                <table class="table">
+                                    <caption>Hakkımda Tablosunun Listesi</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Hakkımda İçerik</th>
+                                            <th scope="col"><a href="@Url.Action("Create","AboutMe")" class="btn btn-primary">Ekle</a></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    @foreach (var about in Model.AboutPage)
+                                       {
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">@about.Id</th>
+                                            <td>@about.AboutContent</td>
+                                            <td><a href="@Url.Action("Operations","AboutMe", new {id = about.Id })" class="btn btn-success ">Güncelle</a></td>
+                                            <td><a href="@Url.Action("Delete","AboutMe", new {id = about.Id })" class="btn btn-danger" style="width:87px;">Sil</a></td>
+                                        </tr>
+                                    </tbody>
+                                    }
+
+                                </table>
+                                       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto"></footer>
+        </div>
+    </div>
+
+</body>
+
+

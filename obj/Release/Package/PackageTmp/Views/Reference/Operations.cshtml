@@ -1,0 +1,75 @@
+﻿@model CemKeskin.Models.Entity.TBLReferences
+@{
+    ViewBag.Title = "Operations";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<body>
+    <div id="layoutSidenav">
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Referans Güncelleme Bölümü</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Admin Panel/Referans Bölümü/Referans Güncelle Bölümü</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-12">
+                                @using (Html.BeginForm("Update", "Reference", FormMethod.Post, new { enctaype = "multiple/form-data" }))
+                                {
+                                    <p>Id Numarası:</p>
+                                    @Html.TextBoxFor(m => m.Id, new { @class = "form-control", @readonly = "true" })
+                                    <p>Referans Başlık:</p>
+                                    @Html.TextBoxFor(m => m.ReferenceTitle, htmlAttributes: new { required = "required", @class = "form-control" })
+                                    <p>Referans İçerik:</p>
+                                    @Html.TextAreaFor(m => m.ReferenceContent, htmlAttributes: new { required = "required", @class = "form-control aboutheight" })
+                                    <p>Referans Link:</p>
+                                    @Html.TextBoxFor(m => m.ReferencesLinks, htmlAttributes: new { required = "required", @class = "form-control" })
+                                    <p>Referans Resim:</p>
+                                    @Html.TextBoxFor(m => m.ReferenceImages, htmlAttributes: new { id = "fileUpload", required = "required", type = "file", @class = "form-control" })
+
+                                    <button class="btn btn-success" value="Upload" onclick="return Upload()" type="submit" style="margin-top:20px;">Güncelle</button>
+                                }
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto"></footer>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript">
+  //dosya uzantısı ve boyutunu kontrol eder.
+    function Upload() {
+        var fileUpload = document.getElementById("fileUpload");
+        var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(.jpg|.png|.gif|.jpeg)$");
+        if (regex.test(fileUpload.value.toLowerCase())) {
+            if (typeof (fileUpload.files) != "undefined") {
+                var reader = new FileReader();
+                reader.readAsDataURL(fileUpload.files[0]);
+                reader.onload = function (e) {
+                    var image = new Image();
+
+                    image.src = e.target.result;
+
+                    image.onload = function () {
+                        var height = this.height;
+                        var width = this.width;
+                        if (height > 2000 || width > 3000) {
+                            alert("Dosya boyutu çok büyük! Eğer işlemi onaylarsanız sitenizde yavaşlama görülebilir.Lütfen daha az çözünürlüklü bir fotoğraf yükleyin.");
+                            return false;
+                        }
+                        alert("Dosya boyutu onaylandı.");
+                        return true;
+                    };
+                }
+            } else {
+                alert("Bu Tarayıcı HTML5 Desteklemiyor.");
+                return false;
+            }
+        }
+    }
+</script>

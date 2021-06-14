@@ -1,0 +1,94 @@
+﻿@model CemKeskin.Models.Classes.ForHome
+
+
+
+
+<div id="fh5co-resume" class="fh5co-bg-color">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>Özgeçmişim</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0">
+                <ul class="timeline">
+                    <li class="timeline-heading text-center animate-box">
+                        <div><h3>İŞ DENEYİMLERİM</h3></div>
+                    </li>
+
+                    @foreach (var exp in Model.ExpPage)
+                    {
+                        if (exp.ResumeId == 1)  //Resume id 1 ise veritabanındaki TBLResume içindeki Positioning = Sol'dur sola konumlandırmak için kullanılmıştır. 
+                        {
+                            <li class="animate-box timeline-unverted">
+                                <div class="timeline-badge"><i class="@exp.ExpIcon"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">@exp.ExpTitle</h3>
+                                        <span class="company">@exp.ExpContent</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>@exp.ExpYear</p>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                        else if (exp.ResumeId == 2) //Resume id 2 ise veritabanındaki TBLResume içindeki Positioning = Sağ'dır Sağa konumlandırmak için kullanılmıştır.
+                        {
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge"><i class="@exp.ExpIcon"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">@exp.ExpTitle</h3>
+                                        <span class="company">@exp.ExpContent</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>@exp.ExpYear</p>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    }
+                    <li class="timeline-heading text-center animate-box">
+                        <div><h3>EĞİTİM SÜRECİM</h3></div>
+                    </li>
+
+                    @foreach (var edu in Model.EducationPage)
+                    {
+                        if (edu.ResumeId == 1) //Resume id 1 ise veritabanındaki TBLResume içindeki Positioning = Sol'dur sola konumlandırmak için kullanılmıştır.
+                        {
+                            <li class="animate-box timeline-unverted">
+                                <div class="timeline-badge"><i class="@edu.EducationIcon"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">@edu.EducationTitle</h3>
+                                        <span class="company">@edu.EducationYear</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>@edu.EducationContent</p>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                        else if (edu.ResumeId == 2) //Resume id 2 ise veritabanındaki TBLResume içindeki Positioning = Sağ'dır Sağa konumlandırmak için kullanılmıştır.
+                        {
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge"><i class="@edu.EducationIcon"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">@edu.EducationTitle</h3>
+                                        <span class="company">@edu.EducationYear</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>@edu.EducationContent</p>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+﻿@model CemKeskin.Models.Classes.ForAdmin
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<body>
+    <div id="layoutSidenav">
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Referanslar Bölümü</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Admin Panel/Referanslar Bölümü</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-calendar-check"></i>
+                                    Referanslar Tablosu
+                                </div>
+                                       
+                                <table class="table">
+                                    <caption>Referanslar Tablosunun Listesi</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Referans Başlık</th>
+                                            <th scope="col">Referans İçerik</th>
+                                            <th scope="col">Referans Resim</th>
+                                            <th scope="col">Referans Link</th>
+                                            <th scope="col"><a href="@Url.Action("Create","Reference")" class="btn btn-primary">Ekle</a></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    @foreach (var reference in Model.ReferencePage)
+                                       {
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">@reference.Id</th>
+                                            <td>@reference.ReferenceTitle</td>
+                                            <td>@reference.ReferenceContent</td>
+                                            <td>@reference.ReferenceImages</td>
+                                            <td>@reference.ReferencesLinks</td>
+                                            <td><a href="@Url.Action("Operations","Reference", new {id = reference.Id })" class="btn btn-success ">Güncelle</a></td>
+                                            <td><a href="@Url.Action("Delete","Reference", new {id = reference.Id })" class="btn btn-danger" style="width:87px;">Sil</a></td>
+                                        </tr>
+                                    </tbody>
+                                    }
+
+                                </table>
+                                       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto"></footer>
+        </div>
+    </div>
+
+</body>
+

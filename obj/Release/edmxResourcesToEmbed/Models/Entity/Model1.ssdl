@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseCemKeskinModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TBLAboutMe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AboutContent" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TBLEducation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EducationTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="EducationYear" Type="nvarchar" MaxLength="500" />
+    <Property Name="EducationContent" Type="nvarchar" MaxLength="500" />
+    <Property Name="EducationIcon" Type="nvarchar" MaxLength="250" />
+    <Property Name="ResumeId" Type="int" />
+  </EntityType>
+  <EntityType Name="TBLExperiences">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExpTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExpYear" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExpContent" Type="nvarchar" MaxLength="250" />
+    <Property Name="ExpIcon" Type="nvarchar" MaxLength="250" />
+    <Property Name="ResumeId" Type="int" />
+  </EntityType>
+  <EntityType Name="TBLLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="30" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="RealName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLReferences">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReferenceTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReferenceContent" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReferenceImages" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReferencesLinks" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TBLResume">
+    <Key>
+      <PropertyRef Name="ResumeId" />
+    </Key>
+    <Property Name="ResumeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Positioning" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLServices">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServicesTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="ServicesContent" Type="nvarchar" MaxLength="500" />
+    <Property Name="ServicesIcon" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="TBLSocialMedia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SocialMediaName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SocialMediaLinks" Type="nvarchar" MaxLength="500" />
+    <Property Name="SocialMediaIcons" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <Association Name="FK_TBLEducation_TBLResume">
+    <End Role="TBLResume" Type="Self.TBLResume" Multiplicity="0..1" />
+    <End Role="TBLEducation" Type="Self.TBLEducation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLResume">
+        <PropertyRef Name="ResumeId" />
+      </Principal>
+      <Dependent Role="TBLEducation">
+        <PropertyRef Name="ResumeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLExperiences_TBLResume">
+    <End Role="TBLResume" Type="Self.TBLResume" Multiplicity="0..1" />
+    <End Role="TBLExperiences" Type="Self.TBLExperiences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLResume">
+        <PropertyRef Name="ResumeId" />
+      </Principal>
+      <Dependent Role="TBLExperiences">
+        <PropertyRef Name="ResumeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DatabaseCemKeskinModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLAboutMe" EntityType="Self.TBLAboutMe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLEducation" EntityType="Self.TBLEducation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLExperiences" EntityType="Self.TBLExperiences" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLLogin" EntityType="Self.TBLLogin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLReferences" EntityType="Self.TBLReferences" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLResume" EntityType="Self.TBLResume" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLServices" EntityType="Self.TBLServices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLSocialMedia" EntityType="Self.TBLSocialMedia" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TBLEducation_TBLResume" Association="Self.FK_TBLEducation_TBLResume">
+      <End Role="TBLResume" EntitySet="TBLResume" />
+      <End Role="TBLEducation" EntitySet="TBLEducation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLExperiences_TBLResume" Association="Self.FK_TBLExperiences_TBLResume">
+      <End Role="TBLResume" EntitySet="TBLResume" />
+      <End Role="TBLExperiences" EntitySet="TBLExperiences" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

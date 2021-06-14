@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6b73c6c00e1f41f6846feaf6c10f5d0d" Name="Diagram1">
+        <EntityTypeShape EntityType="DatabaseCemKeskinModel.TBLAboutMe" Width="1.5" PointX="4.625" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseCemKeskinModel.TBLLogin" Width="1.5" PointX="6.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseCemKeskinModel.TBLReferences" Width="1.5" PointX="6.5" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseCemKeskinModel.TBLServices" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseCemKeskinModel.TBLSocialMedia" Width="1.5" PointX="8.25" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseCemKeskinModel.sysdiagrams" Width="1.5" PointX="14.25" PointY="3.125" />
+        <EntityTypeShape EntityType="DatabaseCemKeskinModel.TBLEducation" Width="1.5" PointX="3.75" PointY="4.625" />
+        <EntityTypeShape EntityType="DatabaseCemKeskinModel.TBLExperiences" Width="1.5" PointX="0.5" PointY="2.5" />
+        <EntityTypeShape EntityType="DatabaseCemKeskinModel.TBLResume" Width="1.5" PointX="0.5" PointY="5.25" />
+        <AssociationConnector Association="DatabaseCemKeskinModel.FK_TBLEducation_TBLResume" />
+        <AssociationConnector Association="DatabaseCemKeskinModel.FK_TBLExperiences_TBLResume" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

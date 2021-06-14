@@ -1,0 +1,66 @@
+﻿@model CemKeskin.Models.Classes.ForAdmin
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<body>
+    <div id="layoutSidenav">
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Servis Bölümü</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Admin Panel/Servis Bölümü</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fab fa-servicestack"></i>
+                                    Servis Tablosu
+                                </div>
+
+                                <table class="table">
+                                    <caption>Servis Tablosunun Listesi</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Servis Başlık</th>
+                                            <th scope="col">Servis İçerik</th>
+                                            <th scope="col">Servis İkon</th>
+                                            <th scope="col"><a href="@Url.Action("Create","Service")" class="btn btn-primary">Ekle</a></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    @foreach (var service in Model.ServicePage)
+                                    {
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">@service.Id</th>
+                                                <td>@service.ServicesTitle</td>
+                                                <td>@service.ServicesContent</td>
+                                                <td>@service.ServicesIcon</td>
+                                                <td><a href="@Url.Action("Operations","Service", new {id = service.Id })" class="btn btn-success ">Güncelle</a></td>
+                                                <td><a href="@Url.Action("Delete","Service", new {id = service.Id })" class="btn btn-danger" style="width:87px;">Sil</a></td>
+
+                                            </tr>
+                                        </tbody>
+                                    }
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto"></footer>
+        </div>
+    </div>
+
+</body>
+
+
+

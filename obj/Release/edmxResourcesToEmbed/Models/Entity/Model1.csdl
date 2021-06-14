@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseCemKeskinModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBLAboutMe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AboutContent" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TBLLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RealName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TBLReferences">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReferenceTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceImages" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReferencesLinks" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TBLServices">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServicesTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ServicesContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ServicesIcon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TBLSocialMedia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SocialMediaName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SocialMediaLinks" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SocialMediaIcons" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DatabaseCemKeskinEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBLAboutMe" EntityType="Self.TBLAboutMe" />
+    <EntitySet Name="TBLLogin" EntityType="Self.TBLLogin" />
+    <EntitySet Name="TBLReferences" EntityType="Self.TBLReferences" />
+    <EntitySet Name="TBLServices" EntityType="Self.TBLServices" />
+    <EntitySet Name="TBLSocialMedia" EntityType="Self.TBLSocialMedia" />
+    <EntitySet Name="sysdiagrams" EntityType="DatabaseCemKeskinModel.sysdiagrams" />
+    <EntitySet Name="TBLEducation" EntityType="DatabaseCemKeskinModel.TBLEducation" />
+    <EntitySet Name="TBLExperiences" EntityType="DatabaseCemKeskinModel.TBLExperiences" />
+    <EntitySet Name="TBLResume" EntityType="DatabaseCemKeskinModel.TBLResume" />
+    <AssociationSet Name="FK_TBLEducation_TBLResume" Association="DatabaseCemKeskinModel.FK_TBLEducation_TBLResume">
+      <End Role="TBLResume" EntitySet="TBLResume" />
+      <End Role="TBLEducation" EntitySet="TBLEducation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLExperiences_TBLResume" Association="DatabaseCemKeskinModel.FK_TBLExperiences_TBLResume">
+      <End Role="TBLResume" EntitySet="TBLResume" />
+      <End Role="TBLExperiences" EntitySet="TBLExperiences" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TBLEducation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EducationTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EducationYear" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EducationContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EducationIcon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ResumeId" Type="Int32" />
+    <NavigationProperty Name="TBLResume" Relationship="DatabaseCemKeskinModel.FK_TBLEducation_TBLResume" FromRole="TBLEducation" ToRole="TBLResume" />
+  </EntityType>
+  <EntityType Name="TBLExperiences">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExpTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExpYear" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExpContent" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ExpIcon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ResumeId" Type="Int32" />
+    <NavigationProperty Name="TBLResume" Relationship="DatabaseCemKeskinModel.FK_TBLExperiences_TBLResume" FromRole="TBLExperiences" ToRole="TBLResume" />
+  </EntityType>
+  <EntityType Name="TBLResume">
+    <Key>
+      <PropertyRef Name="ResumeId" />
+    </Key>
+    <Property Name="ResumeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Positioning" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBLEducation" Relationship="DatabaseCemKeskinModel.FK_TBLEducation_TBLResume" FromRole="TBLResume" ToRole="TBLEducation" />
+    <NavigationProperty Name="TBLExperiences" Relationship="DatabaseCemKeskinModel.FK_TBLExperiences_TBLResume" FromRole="TBLResume" ToRole="TBLExperiences" />
+  </EntityType>
+  <Association Name="FK_TBLEducation_TBLResume">
+    <End Type="DatabaseCemKeskinModel.TBLResume" Role="TBLResume" Multiplicity="0..1" />
+    <End Type="DatabaseCemKeskinModel.TBLEducation" Role="TBLEducation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLResume">
+        <PropertyRef Name="ResumeId" />
+      </Principal>
+      <Dependent Role="TBLEducation">
+        <PropertyRef Name="ResumeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLExperiences_TBLResume">
+    <End Type="DatabaseCemKeskinModel.TBLResume" Role="TBLResume" Multiplicity="0..1" />
+    <End Type="DatabaseCemKeskinModel.TBLExperiences" Role="TBLExperiences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLResume">
+        <PropertyRef Name="ResumeId" />
+      </Principal>
+      <Dependent Role="TBLExperiences">
+        <PropertyRef Name="ResumeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

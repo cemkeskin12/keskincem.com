@@ -1,0 +1,42 @@
+﻿@model CemKeskin.Models.Entity.TBLServices
+
+@{
+    ViewBag.Title = "Operations";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<body>
+    <div id="layoutSidenav">
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Hakkımda Ekleme Bölümü</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Admin Panel/Hakkımda Bölümü/Hakkımda Güncelle Bölümü</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-12">
+
+                            @using (Html.BeginForm("Update", "Service", FormMethod.Post))
+                            {
+                                <p>Id Numarası:</p>
+                                @Html.TextBoxFor(m => m.Id, new { @class = "form-control", @readonly = "true" })
+                                <p>Servis Başlık:</p>
+                                @Html.TextBoxFor(m => m.ServicesTitle, new { @class = "form-control"})
+                                <p>Servis ikon:</p>
+                                @Html.TextBoxFor(m => m.ServicesIcon, new { @class = "form-control"})
+                                <p>İçerik:</p>
+                                @Html.TextAreaFor(m => m.ServicesContent, new { @class = "form-control aboutheight" })
+
+                                <button class="btn btn-success" type="submit" style="margin-top:20px;">Güncelle</button>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto"></footer>
+        </div>
+    </div>
+
+</body>

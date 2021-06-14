@@ -1,0 +1,34 @@
+﻿@model CemKeskin.Models.Entity.TBLLogin
+
+@{
+    Layout = null;
+}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="~/Content/Login.css" rel="stylesheet" />
+<title>Cem Keskin</title>
+<link rel="shortcut icon" type="image/x-icon" href="~/Images/MyLogo.png" />
+<!------ Include the above in your HEAD tag ---------->
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="~/Images/MyLogo.png" id="icon" alt="User Icon" />
+        </div>
+        <!-- Login Form -->
+
+        @using (Html.BeginForm("Login", "Security", FormMethod.Post))
+            {
+            @ViewBag.LoginMessage
+            @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "Kullanıcı Adı" })
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Parola" })
+            <button type="submit" class="btn btn-success">Giriş Yap</button>
+        }
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" href="#">Şifrenizi mi Unuttunuz?</a>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,47 @@
+﻿@model CemKeskin.Models.Entity.TBLExperiences
+@{
+    ViewBag.Title = "Operations";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<body>
+    <div id="layoutSidenav">
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">İş Deneyimlerim Ekleme Bölümü</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Admin Panel/İş Deneyimlerim Bölümü/İş Deneyimlerim Güncelle Bölümü</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-12">
+
+                            @using (Html.BeginForm("Update", "Experiences", FormMethod.Post))
+                            {
+                                <p>Id Numarası:</p>
+                                @Html.TextBoxFor(m => m.Id, new { @class = "form-control", @readonly = "true" })
+                                <p>İş Deneyim Başlığı:</p>
+                                @Html.TextBoxFor(m => m.ExpTitle, new { @class = "form-control"})
+                                <p>İş Deneyim Yılı:</p>
+                                @Html.TextBoxFor(m => m.ExpYear, new { @class = "form-control"})
+                                <p>İş Deneyim İçeriği:</p>
+                                @Html.TextBoxFor(m => m.ExpContent, new { @class = "form-control"})
+                                <p>İş Deneyim İkonu:</p>
+                                @Html.TextBoxFor(m => m.ExpIcon, new { @class = "form-control"})
+                                <p>Konumlandırma:</p>
+                                @Html.DropDownListFor(m => m.TBLResume.ResumeId, (List<SelectListItem>)ViewBag.vls, new { @class = "form-control" })
+
+                                <button class="btn btn-success" type="submit" style="margin-top:20px;">Güncelle</button>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto"></footer>
+        </div>
+    </div>
+
+</body>
+

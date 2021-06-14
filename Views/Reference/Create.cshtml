@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<body>
+    <div id="layoutSidenav">
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Referans Ekleme Bölümü</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Admin Panel/Referans Bölümü/Referans Ekleme Bölümü</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-12">
+
+                            <form class="form-group" method="post" enctype="multipart/form-data">
+                                <label>
+                                    Referans Başlık :
+                                </label>
+                                <input type="text" class="form-control" name="ReferenceTitle" required="required" /> <!--Buradaki name kısmı form post edildiğinde çalışacak olan AboutMe tablosunun içindeki sütunun adı-->
+                                <label>
+                                    Referans İçerik :
+                                </label>
+                                <input type="text" class="form-control" name="ReferenceContent" required="required" />
+                                <label>
+                                    Referans Link :
+                                </label>
+                                <input type="text" class="form-control" name="ReferencesLinks" required="required" />
+                                <label>
+                                    Referans Resim :
+                                </label>
+                                <input type="file" id="fileUpload" class="form-control" name="ReferenceImages" required="required" />
+
+                                <br />
+                                <button type="button" value="Upload" onclick="return Upload()" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    Ekle
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Veri Ekleme Onay Kutusu</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Bu işlemi onaylıyor musunuz ?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                                                <button class="btn btn-success">Onayla</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto"></footer>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript">  //dosya uzantısı ve boyutunu kontrol eder.
+    function Upload() {
+        var fileUpload = document.getElementById("fileUpload");
+        var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(.jpg|.png|.gif|.jpeg)$");
+        if (regex.test(fileUpload.value.toLowerCase())) {
+            if (typeof (fileUpload.files) != "undefined") {
+                var reader = new FileReader();
+                reader.readAsDataURL(fileUpload.files[0]);
+                reader.onload = function (e) {
+                    var image = new Image();
+
+                    image.src = e.target.result;
+
+                    image.onload = function () {
+                        var height = this.height;
+                        var width = this.width;
+                        if (height > 2000 || width > 3000) {
+                            alert("Dosya boyutu çok büyük! Eğer işlemi onaylarsanız sitenizde yavaşlama görülebilir.Lütfen daha az çözünürlüklü bir fotoğraf yükleyin.");
+                            return false;
+                        }
+                        alert("Dosya boyutu onaylandı.");
+                        return true;
+                    };
+                }
+            } else {
+                alert("Bu Tarayıcı HTML5 Desteklemiyor.");
+                return false;
+            }
+        }
+    }
+</script>

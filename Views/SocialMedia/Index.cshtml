@@ -1,0 +1,62 @@
+﻿@model CemKeskin.Models.Classes.ForAdmin
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<body>
+    <div id="layoutSidenav">
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Sosyal Medya Bölümü</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Admin Panel/Sosyal Medya Bölümü</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    Sosyal Medya Tablosu
+                                </div>
+
+                                <table class="table">
+                                    <caption>Sosyal Medya Tablosunun Listesi</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Sosyal Medya İsim</th>
+                                            <th scope="col">Sosyal Medya Link</th>
+                                            <th scope="col">Sosyal Medya İkon</th>
+                                            <th scope="col"><a href="@Url.Action("Create","SocialMedia")" class="btn btn-primary">Ekle</a></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    @foreach (var social in Model.SocialMediaPage)
+                                    {
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">@social.Id</th>
+                                                <td>@social.SocialMediaName</td>
+                                                <td>@social.SocialMediaLinks</td>
+                                                <td>@social.SocialMediaIcons</td>
+                                                <td><a href="@Url.Action("Operations","SocialMedia", new {id = social.Id })" class="btn btn-success ">Güncelle</a></td>
+                                                <td><a href="@Url.Action("Delete","SocialMedia", new {id = social.Id })" class="btn btn-danger" style="width:87px;">Sil</a></td>
+                                            </tr>
+                                        </tbody>
+                                    }
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto"></footer>
+        </div>
+    </div>
+
+</body>

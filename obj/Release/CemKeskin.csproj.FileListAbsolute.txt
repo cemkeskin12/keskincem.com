@@ -1,0 +1,115 @@
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\csc.exe
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\csc.exe.config
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\csc.rsp
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\csi.exe
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\csi.rsp
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\System.AppContext.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\vbc.exe
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\vbc.exe.config
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\vbc.rsp
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\VBCSCompiler.exe
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\CemKeskin.dll.config
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\CemKeskin.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\CemKeskin.pdb
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\EntityFramework.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\EntityFramework.SqlServer.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\System.Web.Helpers.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\System.Web.Mvc.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\System.Web.Razor.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\System.Web.Webpages.Deployment.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\System.Web.Webpages.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\System.Web.Webpages.Razor.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\EntityFramework.xml
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\EntityFramework.SqlServer.xml
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\System.Web.Razor.xml
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\System.Web.Webpages.xml
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\System.Web.Webpages.Deployment.xml
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\System.Web.Webpages.Razor.xml
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\System.Web.Helpers.xml
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\System.Web.Mvc.xml
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\tr\System.Web.Razor.resources.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\tr\System.Web.Webpages.resources.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\tr\System.Web.Webpages.Deployment.resources.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\tr\System.Web.Webpages.Razor.resources.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\tr\System.Web.Helpers.resources.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\bin\tr\System.Web.Mvc.resources.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\obj\Release\CemKeskin.csprojResolveAssemblyReference.cache
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\obj\Release\CemKeskin.dll
+C:\Users\cmksk\Desktop\CKWebSite\CemKeskin\CemKeskin\obj\Release\CemKeskin.pdb
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\csc.exe
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\csc.exe.config
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\csc.rsp
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\csi.exe
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\csi.rsp
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\System.AppContext.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\vbc.exe
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\vbc.exe.config
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\vbc.rsp
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\VBCSCompiler.exe
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\CemKeskin.dll.config
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\CemKeskin.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\CemKeskin.pdb
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\EntityFramework.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\EntityFramework.SqlServer.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\System.Web.Helpers.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\System.Web.Mvc.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\System.Web.Razor.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\System.Web.Webpages.Deployment.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\System.Web.Webpages.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\System.Web.Webpages.Razor.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\EntityFramework.xml
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\EntityFramework.SqlServer.xml
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\System.Web.Razor.xml
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\System.Web.Webpages.xml
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\System.Web.Webpages.Deployment.xml
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\System.Web.Webpages.Razor.xml
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\System.Web.Helpers.xml
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\System.Web.Mvc.xml
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\tr\System.Web.Razor.resources.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\tr\System.Web.Webpages.resources.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\tr\System.Web.Webpages.Deployment.resources.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\tr\System.Web.Webpages.Razor.resources.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\tr\System.Web.Helpers.resources.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\bin\tr\System.Web.Mvc.resources.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\obj\Release\CemKeskin.csproj.CoreCompileInputs.cache
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\obj\Release\CemKeskin.csproj.CopyComplete
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\obj\Release\CemKeskin.dll
+C:\Users\cmksk\Desktop\keskincem.com\Son Sürüm\CemKeskin\CemKeskin\obj\Release\CemKeskin.pdb

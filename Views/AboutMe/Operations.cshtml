@@ -1,0 +1,40 @@
+﻿@model CemKeskin.Models.Entity.TBLAboutMe
+@{
+    ViewBag.Title = "AboutUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<body>
+    <div id="layoutSidenav">
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid">
+                    <h1 class="mt-4">Hakkımda Ekleme Bölümü</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Admin Panel/Hakkımda Bölümü/Hakkımda Güncelle Bölümü</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-12">
+
+                            @using (Html.BeginForm("Update", "AboutMe", FormMethod.Post))
+                            {
+                                <p>Id Numarası:</p>
+                                @Html.TextBoxFor(m => m.Id, new { @class = "form-control" , @readonly="true"})
+                                <p>İçerik:</p>
+                                @Html.TextAreaFor(m => m.AboutContent, new { @class = "form-control aboutheight" })
+
+                                <button class="btn btn-success" type="submit" style="margin-top:20px;">Güncelle</button>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto"></footer>
+        </div>
+    </div>
+
+</body>

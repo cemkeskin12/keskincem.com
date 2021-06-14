@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="page">
+
+
+    <section id="home">
+        <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" style="background-image:url(../../Images/MyLogo.png) ;background-size:auto; background-repeat:no-repeat;" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t js-fullheight">
+                            <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+                                <div class="profile-thumb" style="background: url(../../Images/CemKeskinLogo.png); height:220px;"></div>
+
+                                <h1><span>Cem Keskin</span></h1>
+                                <h3><span>Web Developer / Free Lancer</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    @Html.Partial("_AboutMe")
+
+
+    @Html.Partial("_Resume")
+
+</div>
+
+
+<div id="fh5co-features" class="animate-box">
+    @Html.Partial("_Services")
+</div>
+
+
+
+<div id="fh5co-work" class="fh5co-bg-dark">
+    @Html.Partial("_References")
+</div>
+
+<div>
+    @Html.Partial("_ContactMe")
+</div>
+
+
+<div class="text-center col-md-12 p-3" style="padding:10px; margin-top:30px;">
+    © 2021 Cem Keskin Web Sitesi Copyright - Tüm Hakları Saklıdır.
+</div>
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="fas fa-arrow-up" style="font-size:100%;"></i></a>
+</div>

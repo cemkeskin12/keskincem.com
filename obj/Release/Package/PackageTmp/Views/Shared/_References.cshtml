@@ -1,0 +1,24 @@
+﻿@model CemKeskin.Models.Classes.ForHome
+
+
+<div class="container">
+    <div class="row animate-box">
+        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+            <h2>Referanslar</h2>
+        </div>
+    </div>
+    <div class="row">
+@foreach (var reference in Model.ReferencePage)
+            {
+        <div class="col-md-3 text-center col-padding animate-box ">
+                <a href="@reference.ReferencesLinks" class="work" style="background-image:  url(@reference.ReferenceImages); width:100%; background-position:100% 25%; border:2px solid silver; border-radius:5px; background-color:#ede9e9">
+                    <div class="desc">
+                        <h3>@reference.ReferenceTitle</h3>
+                        <span>@reference.ReferenceContent</span>
+                    </div>
+                </a>
+            
+        </div>
+            }
+    </div>
+</div>

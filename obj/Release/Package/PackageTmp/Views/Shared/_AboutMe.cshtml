@@ -1,0 +1,25 @@
+﻿@model CemKeskin.Models.Classes.ForHome
+
+
+
+
+<div id="fh5co-about" class="animate-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10" style="margin-left:10%">
+                <h2>Merhaba!</h2>
+                @foreach (var about in Model.AboutPage)
+                {
+                    <p>
+                        @about.AboutContent
+                    </p>
+                }
+            </div>
+        </div>
+    </div>
+</div>
